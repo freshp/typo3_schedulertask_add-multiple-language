@@ -6,9 +6,10 @@ namespace Freshp\Typo3SchedulertaskAddMultipleLanguage\Domain\Repository;
 use Freshp\Typo3SchedulertaskAddMultipleLanguage\Factory\SysLanguageFactory;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Lang\Domain\Model\Language;
 
-class SysLanguageRepository extends AbstractRepository
+class SysLanguageRepository extends Repository
 {
     private $tableName = 'sys_language';
 

@@ -20,6 +20,8 @@ class ImportLocationTask extends AbstractTask
         $sysLanguageRepository = $objectManager->get(SysLanguageRepository::class);
         $languages = array_merge_recursive([DefaultLanguageFactory::create()], $sysLanguageRepository->findAll());
 
+        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($languages);
+
         $importOfficeService = new ImportLocationService(
             $objectManager->get(PersistenceManager::class),
             $objectManager->get(LocationRepository::class)

@@ -43,15 +43,16 @@ final class ImportLocationService
             $locations = json_decode($content, true);
 
             foreach ($locations as $location) {
+                \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($location);
                 $knownLocation = $this->locationRepository->findOneByApiIdAndSysLanguageId(
-                    $location['api_id'],
+                    $location['apiId'],
                     $language->getUid()
                 );
 
                 $parentElement = null;
                 if (ExtensionStatics::DEFAULT_LANGUAGE_ID !== $language->getUid()) {
                     $parentElement = $this->locationRepository->findOneByApiIdAndSysLanguageId(
-                        $location['api_id'],
+                        $location['apiId'],
                         ExtensionStatics::DEFAULT_LANGUAGE_ID
                     );
                 }
@@ -75,6 +76,7 @@ final class ImportLocationService
      */
     private function persistOffice(Location $location, ?bool $isNew): void
     {
+        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($location);
         if (true === $isNew) {
             $this->locationRepository->add($location);
             $this->persistenceManager->persistAll();
@@ -97,7 +99,7 @@ final class ImportLocationService
         if (null === $knownLocation) {
             $new = true;
             $knownLocation = new Location();
-            $knownLocation->setApiId($location['api_id']);
+            $knownLocation->setApiId($location['apiId']);
         }
 
         $knownLocation->set_languageUid($sysLanguageUid);

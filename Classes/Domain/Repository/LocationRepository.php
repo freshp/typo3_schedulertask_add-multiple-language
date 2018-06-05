@@ -11,6 +11,7 @@ class LocationRepository extends Repository
     public function findOneByApiIdAndSysLanguageId(string $apiId, int $languageUid): ?Location
     {
         $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(false);
         $query->getQuerySettings()->setIgnoreEnableFields(true);
         $query->getQuerySettings()->setRespectSysLanguage(false);
 
