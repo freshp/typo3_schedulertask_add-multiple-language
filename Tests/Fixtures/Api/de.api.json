@@ -1,0 +1,14 @@
+[
+    {
+        "apiId": "01",
+        "coordinate": {
+            "latitude": 51.74532,
+            "longitude": 7.26564
+        },
+        "address": "test straße 14",
+        "countryCode": "de",
+        "postCode": "45566",
+        "province": "Sachsen",
+        "town": "Dresden"
+    }
+]

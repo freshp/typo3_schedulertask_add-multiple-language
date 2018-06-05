@@ -1,0 +1,5 @@
+vendor
+composer.lock
+typo3_src
+typo3
+index.php

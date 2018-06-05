@@ -1,0 +1,18 @@
+{
+    "name": "freshp/typo3_schedulertask_add-multiple-language",
+    "type": "typo3-cms-extension",
+    "description": "This repository should make a problem with multiple languages in a typo3 scheduler tasks reproducible.",
+    "authors": [],
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "typo3/cms": "~8.7.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Freshp\\Typo3SchedulertaskAddMultipleLanguage\\": "Classes"
+        }
+    }
+}
