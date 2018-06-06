@@ -21,7 +21,8 @@ get further [informations](https://stackoverflow.com/questions/50680928/select-r
 ``` 
 
 ### config
-* add one additional `sys_language`
+* add one additional `sys_language` with locale `en`
+   * default language is `de`
 * install the extension in the extension manager
 * add scheduler job
 
